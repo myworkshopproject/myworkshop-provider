@@ -39,6 +39,7 @@ from .production import *
  * [The “sites” framework](https://docs.djangoproject.com/en/2.2/ref/contrib/sites/) : Associating content with multiple sites
  * [django-allauth 0.40.0](https://github.com/pennersr/django-allauth) : Integrated set of Django applications addressing authentication, registration, account management as well as 3rd party (social) account authentication.
  * [django-crispy-forms 1.8.1](https://github.com/django-crispy-forms/django-crispy-forms) : The best way to have DRY Django forms.
+ * [Django OAuth Toolkit 1.2.0](https://github.com/jazzband/django-oauth-toolkit) : Provide out of the box all the endpoints, data and logic needed to add OAuth2 capabilities to Django projects.
 
 ### Frontend
  * [Bootstrap 4.4.1](https://getbootstrap.com/) : A responsive web toolkit.

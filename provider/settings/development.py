@@ -36,3 +36,10 @@ LANGUAGES = (
 
 # Email
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+# Django OAuth Toolkit
+# SECURITY WARNING: don't run with CORS_ORIGIN_ALLOW_ALL turned on in production!
+CORS_ORIGIN_ALLOW_ALL = True
+# Important to avoid conflicts with the client app
+# also setting its own `sessionid` cookie.
+SESSION_COOKIE_NAME = "oauth2server_sessionid"

@@ -21,11 +21,14 @@ INSTALLED_APPS = [
     "allauth",  # <- django-allauth
     "allauth.account",  # <- django-allauth
     "allauth.socialaccount",  # <- django-allauth
+    "oauth2_provider",  # <- Django OAuth Toolkit
+    "corsheaders",  # <- Django OAuth Toolkit
     "core.apps.CoreConfig",
     "crispy_forms",
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",  # <- Django OAuth Toolkit
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.locale.LocaleMiddleware",  # after "SessionMiddleware" and "CacheMiddleware" ; before "CommonMiddleware"
