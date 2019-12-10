@@ -1,0 +1,40 @@
+{% extends "oauth2_provider/base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Authorize" %} {{ application.name }}?{% endblock %}
+
+{% block card_header %}{% trans "Authorize" %} {{ application.name }}?{% endblock %}
+
+{% block card_body %}
+<div class="card-body">
+    {% if not error %}
+    <form id="authorizationForm" method="post">
+        {% csrf_token %}
+
+        {% for field in form %}
+        {% if field.is_hidden %}
+        {{ field }}
+        {% endif %}
+        {% endfor %}
+
+        <p class="card-text">{% trans "Application requires following permissions" %}</p>
+        <ul>
+            {% for scope in scopes_descriptions %}
+            <li>{{ scope }}</li>
+            {% endfor %}
+        </ul>
+
+        {{ form.errors }}
+        {{ form.non_field_errors }}
+
+        <input type="submit" class="btn btn-secondary" value="Cancel" />
+        <input type="submit" class="btn btn-primary" name="allow" value="Authorize" />
+    </form>
+
+    {% else %}
+    <h4>Error: {{ error.error }}</h4>
+    <p class="card-text">{{ error.description }}</p>
+    {% endif %}
+</div>
+{% endblock %}
