@@ -1,6 +1,8 @@
 # myworkshop-provider
 OAuth provider and document sharing server for a network of _MyWorkshop_ clients.
 
+**This project is currently unmaintained.**
+
 ## Features
  * OAuth provider to share a _Maker_ community;
  * Web REST API to share documents between _MyWorkshop_ clients.
